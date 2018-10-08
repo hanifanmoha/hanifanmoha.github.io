@@ -1,7 +1,8 @@
 # gunung
 
-A repository to store my javascript code library
 by **Mohamad Hanifan**
+
+A repository to store my javascript code library
 
 ## Projects using Javascript
 
