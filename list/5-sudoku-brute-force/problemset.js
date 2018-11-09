@@ -38,7 +38,15 @@ let ps = [
 ]
 
 function getSudoku() {
-    return random(ps);
+    let sdk = random(ps);
+    let copy = [];
+    for(let i=0; i<=9; i++) {
+        copy[i] = [];
+        for(let j=0; j<=9; j++) {
+            copy[i][j] = sdk[i][j];
+        }
+    }
+    return copy;
 }
 
 /*

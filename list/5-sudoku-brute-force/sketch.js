@@ -8,20 +8,27 @@ let r, c;
 let forward = true;
 let sliderFrameRate;
 let sliderIteration;
+let resetButton;
 
 function preload() {
 	font = loadFont('OperatorMono-Medium.otf');
-  }
+}
 
 function setup() {
 	createCanvas(600, 600);
-	sudoku = getSudoku();
 	textFont(font);
+	initButtonSlider();
+	initSudoku();
+}
+
+function initSudoku() {
+	sudoku = getSudoku();
 	initFlag();
 	initDraw();
-	initSlider();
 	r = 1;
 	c = 1;
+	noLoop();
+	loop();
 }
 
 // Draw Approach
@@ -131,15 +138,18 @@ function before() {
 	return { r : bR, c : bC };
 }
 
-function initSlider() {
+function initButtonSlider() {
 	fill(0);
 	textSize(20);
 	text('# of Iteration', 50, 535);
-	sliderIteration = createSlider(1, 1000, 100);
+	sliderIteration = createSlider(1, 1000, 50);
 	sliderIteration.position(50, 550);
-	text('Frame Rate', 350, 535);
-	sliderFrameRate = createSlider(1, 60, 10);
-	sliderFrameRate.position(350, 550)
+	text('Frame Rate', 250, 535);
+	sliderFrameRate = createSlider(1, 60, 5);
+	sliderFrameRate.position(250, 550);
+	resetButton = createButton('RESET');
+	resetButton.position(420, 525);
+	resetButton.mousePressed(initSudoku)
 }
 
 function drawRect(row, col, num) {
@@ -205,8 +215,6 @@ function initFlag() {
 				fRow[i][num] = true;
 				fColumn[j][num] = true;
 				fBlock[ceil(i / 3)][ceil(j / 3)][num] = true;
-			} else {
-
 			}
 		}
 	}
