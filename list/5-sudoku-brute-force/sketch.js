@@ -84,7 +84,6 @@ function draw() {
 			status = status || fBlock[ceil(r / 3)][ceil(c / 3)][num];
 		}
 
-
 		fRow[r][num] = true;
 		fColumn[c][num] = true;
 		fBlock[ceil(r / 3)][ceil(c / 3)][num] = true;
@@ -104,10 +103,18 @@ function draw() {
 }
 
 function drawAll() {
+	let activeRow, activeCol;
+	if(forward) {
+		activeRow = before().r;
+		activeCol = before().c;
+	} else {
+		activeRow = r;
+		activeCol = c;
+	}
 	for(let i=1; i<=9; i++) {
 		for(let j=1; j<=9; j++) {
 			let text = sudoku[i][j] > 0 ? sudoku[i][j] : '';
-			drawRect(i, j, text);
+			drawRect(i, j, text, activeRow, activeCol);
 		}
 	}
 }
@@ -142,20 +149,20 @@ function initButtonSlider() {
 	fill(0);
 	textSize(20);
 	text('# of Iteration', 50, 535);
-	sliderIteration = createSlider(1, 1000, 50);
+	sliderIteration = createSlider(1, 1000, 10);
 	sliderIteration.position(50, 550);
 	text('Frame Rate', 250, 535);
-	sliderFrameRate = createSlider(1, 60, 5);
+	sliderFrameRate = createSlider(1, 60, 60);
 	sliderFrameRate.position(250, 550);
 	resetButton = createButton('RESET');
 	resetButton.position(420, 525);
 	resetButton.mousePressed(initSudoku)
 }
 
-function drawRect(row, col, num) {
+function drawRect(row, col, num, activeRow, activeCol) {
 	push();
 	noStroke();
-	if(row === before().r && col === before().c) {
+	if(row === activeRow && col === activeCol) {
 		fill(255, 255, 0);
 	} else if(isFix[row][col]) {
 		fill(230);

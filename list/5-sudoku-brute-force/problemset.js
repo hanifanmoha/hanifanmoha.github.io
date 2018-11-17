@@ -46,6 +46,18 @@ function getSudoku() {
             copy[i][j] = sdk[i][j];
         }
     }
+    let rand = random(0, 3);
+    for(let i=0; i<rand; i++) {
+        let copyR = copy;
+        copy = [];
+        for(let i=1; i<=9; i++) {
+            copy[i] = [];
+            for(let j=1; j<=9; j++) {
+                copy[i][j] = copyR[j][9-i+1];
+            }
+        }
+    }
+    
     return copy;
 }
 
