@@ -1,7 +1,7 @@
 
-const radius = 300;
-const nLayer = 10;
-const N = 10000;
+const radius = 100;
+const nLayer = 20;
+const N = 500;
 
 let edges = [];
 let angle = 0;
@@ -60,14 +60,14 @@ function draw() {
 		let alpha = 2 * k * 255 / (nLayer);
 		for (let p of layer) {
 			setColor(p.z, alpha);
-			strokeWeight(1);
+			strokeWeight(radius / 100);
 			point(p.x, p.y);
 		}
 	}
 
 	// frameRate(20);
 	counter += 1;
-	if(counter > nLayer) {
+	if(counter > nLayer * 2) {
 		createEdges();
 		counter = 0;
 	}
@@ -104,22 +104,28 @@ function setColor(index, alpha) {
 			stroke(255, 0, 255, alpha);
 			break;
 	}
+	stroke(255, alpha);
 }
 
 const shapes = [
+	{
+		N : 4,
+		X : [],
+		X2 : [0]
+	},
+	{
+		N : 5,
+		X : [1, 2, -3, -4],
+		X2 : []
+	},
 	{
 		N : 4,
 		X : [0],
 		X2 : []
 	},
 	{
-		N : 3,
-		X : [],
-		X2 : []
-	},
-	{
-		N : 4,
-		X : [2, -2],
+		N : 5,
+		X : [-1, 0, 4],
 		X2 : []
 	},
 	{
@@ -130,6 +136,6 @@ const shapes = [
 	{
 		N : 5,
 		X : [0],
-		X2 : []
-	}
+		X2 : [0]
+	},
 ]
