@@ -11,3 +11,4 @@ A repository to store my javascript code library
 3. [Inverse Kinematics](https://hanifanm.github.io/list/3-inverse-kinematics)
 4. [Smart Rocket - Genetic Algorithm](https://hanifanm.github.io/list/4-smart-rocket)
 5. [Sudoku - Brute Force](https://hanifanm.github.io/list/5-sudoku-brute-force)
+6. [Chaos Game](https://hanifanm.github.io/list/6-chaos-game)
