@@ -290,4 +290,4 @@ let imgList = [
   "https://i.pinimg.com/originals/d1/20/e2/d120e28f36070fb3eaa3b502d31be1e7.png",
   "https://i.pinimg.com/originals/50/77/1e/50771e4ae3d9cb06808fd588d901ee63.jpg",
   "https://i.pinimg.com/originals/92/60/95/9260959f756be017e335acdafe82e573.jpg"
-]
+];

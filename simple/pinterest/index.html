@@ -101,13 +101,15 @@
         }
 
         function isInView(elem) {
-            return $(elem).offset().top - $(window).scrollTop() < $(elem).height();
+            return $(elem).offset().top - $(window).scrollTop() < $(window).height();
         }
 
         $(window).scroll(function () {
             let ls = $(".loaderElement");
+            console.log('scroll');
             for (let el of ls) {
                 if (isInView(el)) {
+                    console.log('load more');
                     load15();
                     arrangeImgDiv();
                     return;
