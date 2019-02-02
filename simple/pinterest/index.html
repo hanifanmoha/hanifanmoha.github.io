@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pinterest</title>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class='nav'>
+        <div class="nav-logo">
+            <i class="fab fa-pinterest main-logo"></i>
+        </div>
+        <div class="nav-fill">
+            <i class="fas fa-search search-input-icon"></i>
+            <input id="search-input" class="search-input" placeholder="Search">
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+    </nav>
+
+    <div id="container" class="container">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="imglst.js"></script>
+    <script>
+
+        function getImage() {
+            let index = Math.floor(Math.random() * imgList.length);
+            let image = imgList[index];
+            imgList.splice(index, 1);
+            return image;
+        }
+
+        let currentColumn = Math.floor(window.innerWidth / 280) + 1;
+        window.onresize = () => {
+            let column = Math.floor(window.innerWidth / 280) + 1;
+            if (currentColumn !== column) {
+                currentColumn = column;
+                arrangeImgDiv();
+            }
+        }
+
+        let imgDivs = [];
+        // for (let img of imgList) {
+        function load15() {
+            for (let i = 0; i < 15; i++) {
+                let img = getImage();
+                if(!img) {
+                    return;
+                }
+                let div = document.createElement('div');
+                div.classList.add('card');
+                div.innerHTML = `
+                <div class="card-overlay"></div>
+                <img class="card-img" alt="img" src="${img}" />
+                <div class="card-action">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            `;
+                imgDivs.push(div);
+            }
+        }
+
+        function arrangeImgDiv() {
+
+            let imgCols = [];
+            let container = document.getElementById('container');
+            container.innerHTML = '';
+            for (let i = 0; i < currentColumn; i++) {
+                let col = document.createElement('div');
+                col.classList.add('column');
+                document.getElementById('container').appendChild(col);
+                imgCols.push(col);
+            }
+
+            let colIndex = 0;
+
+            for (let imgDiv of imgDivs) {
+                imgCols[colIndex].appendChild(imgDiv);
+                colIndex = (colIndex + 1) % imgCols.length;
+            }
+
+            for (let col of imgCols) {
+                let loader = document.createElement('div');
+                loader.classList.add('loaderElement');
+                col.appendChild(loader);
+            }
+        }
+
+        function isInView(elem) {
+            return $(elem).offset().top - $(window).scrollTop() < $(elem).height();
+        }
+
+        $(window).scroll(function () {
+            let ls = $(".loaderElement");
+            for (let el of ls) {
+                if (isInView(el)) {
+                    load15();
+                    arrangeImgDiv();
+                    return;
+                }
+            }
+        })
+
+
+        load15();
+        arrangeImgDiv();
+
+    </script>
+
+</body>
+
+</html>
