@@ -1,11 +1,13 @@
 let birds = [];
 let predators = [];
 
-const POPULATION = 100;
+let POPULATION;
 const PREDATOR_POPULATION = 3;
 const RADIUS = 50;
 
 function setup() {
+	POPULATION = windowWidth / 15;
+	console.log(windowWidth, POPULATION)
 	createCanvas(windowWidth, windowHeight);
 	for (let i = 0; i < POPULATION; i++) {
 		birds.push(new Bird());
