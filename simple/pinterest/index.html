@@ -103,7 +103,7 @@
         }
 
         function isInView(elem) {
-            return $(elem).offset().top - $(window).scrollTop() < $(window).height();
+            return $(window).scrollTop() + $(window).innerHeight() + $(elem).height() > $(elem).offset().top
         }
 
         $(window).scroll(function () {

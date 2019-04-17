@@ -13,6 +13,7 @@ A repository to store my javascript code library
 5. [Sudoku - Brute Force](https://hanifanm.github.io/list/5-sudoku-brute-force)
 6. [Chaos Game](https://hanifanm.github.io/list/6-chaos-game)
 7. [Vintage Snake Game](https://hanifanm.github.io/list/7-snake-game)
+9. [Bird Flocking Simulation](https://hanifanm.github.io/list/9-bird-flocking-simulation)
 
 ## Simple Web Project
 
