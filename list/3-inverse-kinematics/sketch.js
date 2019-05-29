@@ -3,11 +3,11 @@ let target;
 let tentacles = [];
 
 function setup() {
-	createCanvas(600, 400);
+	createCanvas(windowWidth, windowHeight);
 	target = new Circle(width/2, height/2, 50, PI/5, 4);
-	tentacles.push(new Tentacle(width/2, 0, 6));
-	tentacles.push(new Tentacle(0, height, 5));
-	tentacles.push(new Tentacle(width, height, 5));
+	tentacles.push(new Tentacle(width/2, 0, 8));
+	tentacles.push(new Tentacle(0, height, 8));
+	tentacles.push(new Tentacle(width, height, 8));
 }
 
 function mousePressed() {
