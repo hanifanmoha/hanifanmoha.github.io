@@ -1,0 +1,9 @@
+@import url('./navbar.css');
+
+body {
+  background-color: #000;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
