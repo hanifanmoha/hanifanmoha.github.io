@@ -4,7 +4,7 @@
 
 .ng-explore-background {
   position: relative;
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url("/assets/images/icepath.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url("../images/icepath.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
