@@ -1,4 +1,6 @@
 @import url('./navbar.css');
+@import url('./explore.css');
+@import url('./section-title.css');
 
 body {
   background-color: #000;
