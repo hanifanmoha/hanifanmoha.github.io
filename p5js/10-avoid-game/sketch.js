@@ -1,6 +1,6 @@
 const N_ENEMY = 10
 const N_AGENT = 100
-const MUTATION_RATE = 0.05
+const MUTATION_RATE = 0.005
 
 let enemies = []
 let agents = []
@@ -21,7 +21,7 @@ function setup() {
 function getParent(val) {
 	let parents = agents
 	.sort((a, b) => b.age - a.age)
-	.slice(0, 20)
+	.slice(0, 10)
 	for (let agent of parents) {
 		if (val < agent.age) return agent
 		else val -= agent.age
@@ -31,7 +31,7 @@ function getParent(val) {
 function reborn() {
 	let sumAge = agents
 	.sort((a, b) => b.age - a.age)
-	.slice(0, 20)	
+	.slice(0, 10)	
 	.reduce((sum, agent) => sum + agent.age, 0)
 	let newAgents = []
 	for (let i = 0; i < N_AGENT; i++) {

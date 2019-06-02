@@ -1,7 +1,7 @@
 class Agent {
 
   constructor(nEnemy, parent) {
-    this.brain = new Brain(2 + nEnemy * 4, nEnemy, nEnemy, 2)
+    this.brain = new Brain(6 + nEnemy * 4, nEnemy, nEnemy, 2)
     if(parent) this.brain.inherit(parent.brain)
     this.pos = createVector(random(width), random(height))
     this.hue = random(100)
@@ -13,8 +13,21 @@ class Agent {
   update(enemies) {
     this.age += 1
     let input = enemies.reduce(
-      (temp, enemy) => [...temp, enemy.pos.x, enemy.pos.y, enemy.vel.x, enemy.vel.y],
-      [this.pos.x, this.pos.y]
+      (temp, enemy) => [
+        ...temp,
+        enemy.pos.x,
+        enemy.pos.y,
+        enemy.vel.x,
+        enemy.vel.y
+      ],
+      [
+        this.pos.x,
+        this.pos.y,
+        this.pos.x,
+        this.pos.y,
+        this.pos.x,
+        this.pos.y,
+      ]
     )
     let [dx, dy] = this.brain.predict(input)
     let vel = createVector(dx, dy)
