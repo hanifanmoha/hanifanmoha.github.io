@@ -1,6 +1,6 @@
 const N_ENEMY = 10
 const N_AGENT = 200
-const MUTATION_RATE = 0.005
+const MUTATION_RATE = 0.001
 
 let enemies = []
 let agents = []
