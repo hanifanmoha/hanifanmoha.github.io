@@ -43,7 +43,7 @@ function reborn() {
 }
 
 function draw() {
-	background(0)
+	background(0, 100)
 
 	for (let enemy of enemies) {
 		enemy.update()
