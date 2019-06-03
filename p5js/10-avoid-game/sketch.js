@@ -1,5 +1,5 @@
 const N_ENEMY = 10
-const N_AGENT = 200
+const N_AGENT = 300
 const MUTATION_RATE = 0.001
 
 let enemies = []
@@ -19,25 +19,23 @@ function setup() {
 	}
 }
 
-function getParent(val) {
-	let parents = agents
-	// .sort((a, b) => b.age - a.age)
-	// .slice(0, 10)
+function getParent() {
+	let parents = agents.sort((a, b) => b.age - a.age).slice(0, N_AGENT / 4)
+	let sumAge = parents
+		.reduce((sum, agent) => sum + agent.age, 0)
+	let val = random(sumAge)
 	for (let agent of parents) {
-		if (val < agent.age) return agent
+		if (val < agent.age) {
+			return agent
+		}
 		else val -= agent.age
 	}
 }
 
 function reborn() {
-	let sumAge = agents
-	// .sort((a, b) => b.age - a.age)
-	// .slice(0, 10)	
-	.reduce((sum, agent) => sum + agent.age, 0)
 	let newAgents = []
 	for (let i = 0; i < N_AGENT; i++) {
-		let r = random(sumAge)
-		let parent = getParent(random(sumAge))
+		let parent = getParent()
 		newAgents.push(new Agent(N_ENEMY, parent))
 	}
 	agents = newAgents
@@ -66,7 +64,7 @@ function draw() {
 	}
 
 	let maxAge = agents.reduce((max, agent) => Math.max(max, agent.age), 0)
-	if(maxAge > highest) {
+	if (maxAge > highest) {
 		highest = maxAge
 	}
 

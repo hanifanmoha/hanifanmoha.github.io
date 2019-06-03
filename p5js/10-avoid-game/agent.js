@@ -1,16 +1,17 @@
 class Agent {
 
   constructor(nEnemy, parent) {
-    this.brain = new Brain(6 + nEnemy * 4, nEnemy, nEnemy, 2)
+    this.brain = new Brain(nEnemy * 4, nEnemy, 4)
 
     this.pos = createVector(random(width), random(height))
+    this.vel = createVector()
     this.hue = random(100)
     this.size = 10
     this.age = 0
     this.alive = true
     if (parent) {
       this.brain.inherit(parent.brain)
-      this.hue = (parent.hue + random(-5, 5)) % 100
+      this.hue = (parent.hue + random(-2, 2)) % 100
     }
   }
 
@@ -19,24 +20,18 @@ class Agent {
     let input = enemies.reduce(
       (temp, enemy) => [
         ...temp,
-        enemy.pos.x,
-        enemy.pos.y,
+        enemy.pos.x - this.pos.x,
+        enemy.pos.y - this.pos.y,
         enemy.vel.x,
         enemy.vel.y
       ],
-      [
-        this.pos.x,
-        this.pos.y,
-        this.pos.x,
-        this.pos.y,
-        this.pos.x,
-        this.pos.y,
-      ]
+      []
     )
-    let [dx, dy] = this.brain.predict(input)
-    let vel = createVector(dx, dy)
-    vel.limit(2)
-    this.pos.add(vel)
+    let [pdx, ndx, pdy, ndy] = this.brain.predict(input)
+    let acc = createVector(pdx - ndx, pdy - ndy)
+    this.vel.add(acc)
+    this.vel.limit(2)
+    this.pos.add(this.vel)
 
     this.pos.x = (this.pos.x + width) % width
     this.pos.y = (this.pos.y + height) % height
@@ -56,9 +51,6 @@ class Agent {
       if (dist(enemy.pos.x, enemy.pos.y, this.pos.x, this.pos.y) < (this.size + enemy.size) / 2) {
         this.alive = false
       }
-    }
-    if (this.pos.x > width || this.pos.x < 0 || this.pos.y > height || this.pos.y < 0) {
-      this.alive = false
     }
   }
 
