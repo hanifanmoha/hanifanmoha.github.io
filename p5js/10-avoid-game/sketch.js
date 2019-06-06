@@ -20,7 +20,7 @@ function setup() {
 }
 
 function getParent() {
-	let parents = agents.sort((a, b) => b.age - a.age).slice(0, N_AGENT / 4)
+	let parents = agents.sort((a, b) => b.age - a.age).slice(0, N_AGENT / 5)
 	let sumAge = parents
 		.reduce((sum, agent) => sum + agent.age, 0)
 	let val = random(sumAge)
