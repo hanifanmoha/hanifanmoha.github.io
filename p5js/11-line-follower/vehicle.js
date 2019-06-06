@@ -1,12 +1,12 @@
 const MAX_SPEED = 3
 const MAX_FORCE = 0.1
-const N_SENSOR = 12
+const N_SENSOR = 8
 
 class Vehicle {
 
   constructor(x, y, parent) {
     this.pos = createVector(x, y)
-    this.vel = createVector(-1, 1)
+    this.vel = createVector(-1,1)
     this.acc = createVector()
     this.alive = true
     this.brain = new Brain(N_SENSOR + 2, N_SENSOR, 4)

@@ -1,4 +1,4 @@
-const SECTION = 10
+const SECTION = 8
 const MIN_RADIUS = 240
 const AVG_RADIUS = 295
 const MAX_RADIUS = 350
