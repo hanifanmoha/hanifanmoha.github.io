@@ -18,14 +18,14 @@ window.onload = function () {
   }
 
   let home = createImgElement()
-  home.src = 'home.png'
+  home.src = 'https://hanifanm.github.io/p5js/static/home.png'
   home.style.bottom = '400px'
   home.addEventListener('click', function(){
     window.open('https://hanifanm.github.io', '_blank')
   })
 
   let refresh = createImgElement()
-  refresh.src = 'refresh.png'
+  refresh.src = 'https://hanifanm.github.io/p5js/static/refresh.png'
   refresh.style.bottom = '500px'
   refresh.addEventListener('click', function(){
     window.location.reload()
