@@ -31,9 +31,11 @@ class Sensor {
 
   show(walls) {
     strokeWeight(1)
-    stroke(255, 100)
+    stroke(255, 50)
     let { p, distance } = this.getNearest(walls)
-    // line(this.x, this.y, p.x, p.y)
+    if (sensorCheckbox.checked()) {
+      line(this.x, this.y, p.x, p.y)
+    }
     return distance
   }
 

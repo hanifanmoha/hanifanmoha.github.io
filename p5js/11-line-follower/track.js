@@ -1,6 +1,6 @@
 const SECTION = 8
-const MIN_RADIUS = 240
-const AVG_RADIUS = 295
+const MIN_RADIUS = 230
+const AVG_RADIUS = 290
 const MAX_RADIUS = 350
 
 class Track {
@@ -11,11 +11,13 @@ class Track {
       this.inout.push({
         in: createVector(width / 2, height / 2)
           .add(createVector(1, 1)
-            .setMag(random(MIN_RADIUS, AVG_RADIUS - 20))
+            .setMag(MIN_RADIUS)
+            // .setMag(random(MIN_RADIUS, AVG_RADIUS - 20))
             .rotate(angle)),
         out: createVector(width / 2, height / 2)
           .add(createVector(1, 1)
-            .setMag(random(AVG_RADIUS + 20, MAX_RADIUS))
+          .setMag(MAX_RADIUS)
+            // .setMag(random(AVG_RADIUS + 20, MAX_RADIUS))
             .rotate(angle))
       })
     }

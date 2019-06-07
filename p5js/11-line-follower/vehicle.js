@@ -1,4 +1,4 @@
-const MAX_SPEED = 3
+const MAX_SPEED = 5
 const MAX_FORCE = 0.1
 const N_SENSOR = 8
 
@@ -9,8 +9,8 @@ class Vehicle {
     this.vel = createVector(-1,1)
     this.acc = createVector()
     this.alive = true
-    this.brain = new Brain(N_SENSOR + 2, N_SENSOR, 4)
-    this.sensing = Array(N_SENSOR + 2).fill(100)
+    this.brain = new Brain(N_SENSOR, N_SENSOR, 4)
+    this.sensing = Array(N_SENSOR).fill(100)
     this.score = 0
     if (parent) {
       this.brain.inherit(parent.brain)
@@ -72,7 +72,7 @@ class Vehicle {
     // Sensor
     let sensing = []
     for (let i = 0; i < N_SENSOR; i++) {
-      let angle = i * 360 / N_SENSOR
+      let angle = i * 360 / N_SENSOR + this.vel.heading()
       let sensor = new Sensor(this.pos.x, this.pos.y, angle)
       let distance = sensor.show(walls)
       sensing.push(distance)
@@ -80,7 +80,8 @@ class Vehicle {
     if (min(sensing) < 3) {
       this.alive = false
     }
-    this.sensing = [this.vel.x, this.vel.y, ...sensing]
+    this.sensing = sensing
+    // this.sensing = [this.vel.x, this.vel.y, ...sensing]
   }
 
 }

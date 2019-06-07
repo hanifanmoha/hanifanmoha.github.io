@@ -1,5 +1,5 @@
 const POPULATION = 50
-const MUTATION_RATE = 0.1
+const MUTATION_RATE = 0.05
 const START_ANGLE = 1
 
 let track
@@ -7,15 +7,19 @@ let vehicles = []
 let startPosition
 let maxScore = 0
 let slider
+let sensorCheckbox
 
 
 function setup() {
 	angleMode(DEGREES)
-	slider = createSlider(1, 100, 1);
-  slider.position(20, 20);
 	createCanvas(1000, 700)
+	slider = createSlider(1, 100, 1)
+	slider.position(20, 40)
+	sensorCheckbox = createCheckbox('Sensor', false)
+	sensorCheckbox.position(18, 70)
+
 	track = new Track()
-	startPosition = createVector(width / 2, height / 2).add(createVector(1, 0).rotate(START_ANGLE).setMag(280))
+	startPosition = createVector(width / 2, height / 2).add(createVector(1, 0).rotate(START_ANGLE).setMag(290))
 	for (let i = 0; i < POPULATION; i++) {
 		vehicles.push(new Vehicle(startPosition.x, startPosition.y))
 	}
@@ -28,6 +32,7 @@ function getParents() {
 function getParent(val, parents) {
 	for (let p of parents) {
 		if (val < p.tempScore) {
+			p.taken++
 			return p
 		}
 		else val -= p.tempScore
@@ -38,20 +43,22 @@ function getParent(val, parents) {
 function reborn() {
 	let parents = vehicles.sort((a, b) => b.score - a.score)
 	parents = parents.map((p, index) => ({
-		tempScore: p.score + (POPULATION - index) / 2,
+		tempScore: p.score,
+		taken: 0,
 		...p
 	}))
 	let sumScore = parents
 		.reduce((sum, p) => sum + p.tempScore, 0)
 	let newVehicles = []
-	for (let i = 0; i < POPULATION - 1; i++) {
+	for (let i = 0; i < POPULATION; i++) {
 		let val = random(sumScore)
 		let parent = getParent(val, parents)
 		newVehicles.push(new Vehicle(startPosition.x, startPosition.y, parent))
 	}
-	let lastBest = new Vehicle(startPosition.x, startPosition.y)
-	lastBest.brain = parents[0].brain
-	newVehicles.push(lastBest)
+	// let lastBest = new Vehicle(startPosition.x + random(-10, 10), startPosition.y + random(-10, 10))
+	// lastBest.brain = parents[0].brain
+	// newVehicles.push(lastBest)
+	// console.log(parents.map(p => ({ score: p.score, taken: p.taken })))
 	vehicles = newVehicles
 }
 
