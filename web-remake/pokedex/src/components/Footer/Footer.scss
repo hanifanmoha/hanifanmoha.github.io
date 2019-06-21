@@ -1,0 +1,16 @@
+@import 'src/scss/tokens';
+
+.root {
+  padding: 50px 0 10px 0;
+  background-color: $dark-alpha-100;
+  color: $light-alpha-100;
+}
+
+.footer {
+}
+
+.hr {
+  margin-top: 8px;
+  border: 0;
+  border-top: 1px solid $light-alpha-100;
+}

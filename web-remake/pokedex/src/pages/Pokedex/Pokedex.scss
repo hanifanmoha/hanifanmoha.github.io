@@ -1,0 +1,15 @@
+@import 'src/scss/tokens';
+
+.root {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  composes: row from global;
+}
+
+.item {
+  display: inline;
+  composes: col-sm-6 col-md-4 col-lg-2 from global;
+}

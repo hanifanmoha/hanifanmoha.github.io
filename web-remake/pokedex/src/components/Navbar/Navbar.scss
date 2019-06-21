@@ -1,0 +1,18 @@
+@import 'src/scss/tokens';
+
+.root {
+  background-color: $watermelon;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  padding: 20px 0;
+}
+
+.appname {
+  color: $light-alpha-100;
+  font-size: 24px;
+  font-weight: 700;
+}

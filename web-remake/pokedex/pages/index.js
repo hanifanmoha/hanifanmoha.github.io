@@ -1,7 +1,2 @@
-const Index = () => (
-  <div>
-    <p>Hello Next.js</p>
-  </div>
-);
-
-export default Index;
+import Index from '../src/pages/Pokedex/Pokedex'
+export default Index
