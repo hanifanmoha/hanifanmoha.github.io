@@ -16,10 +16,11 @@ A repository to store my javascript code library
 8. [Dot Sketch](https://hanifanm.github.io/p5js/8-dot-sketch)
 9. [Bird Flocking Simulation](https://hanifanm.github.io/p5js/9-bird-flocking-simulation)
 10. [Ray Casting](https://hanifanm.github.io/p5js/10-ray-casting)
-10. [NeuroEvolution Car](https://hanifanm.github.io/p5js/11-line-follower)
+11. [NeuroEvolution Car](https://hanifanm.github.io/p5js/11-line-follower)
+12. [Animating Fourier Transform](https://hanifanm.github.io/p5js/12-animating-fourier-transform)
 
 ## Web Remake
 
 1. [Simple Remake Pinterest](https://hanifanm.github.io/web-remake/pinterest)
 2. [National Geographic](https://hanifanm.github.io/web-remake/nationalgeographic) - On Going
-2. [Pokedex](https://hanifanm.github.io/web-remake/pokedex/out)
+<!-- 2. [Pokedex](https://hanifanm.github.io/web-remake/pokedex/out) -->
