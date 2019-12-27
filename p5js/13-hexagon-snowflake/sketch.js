@@ -5,14 +5,6 @@ let SIZE
 
 let myCanvas
 
-function reset() {
-	background(0)
-	stroke(255)
-	fill(0)
-	strokeWeight(1)
-	ellipse(SIZE, SIZE, 2 * SIZE, 2 * SIZE)
-}
-
 function setup() {
 	if(windowWidth < windowHeight) {
 		SIZE = windowWidth / 2 - 10
@@ -22,7 +14,7 @@ function setup() {
 	myCanvas = createCanvas(SIZE*2, SIZE*2)
 	myCanvas.parent('canvasContainer')
 	angleMode(DEGREES)
-	reset()
+	background(0)
 }
 
 function draw() {
@@ -49,9 +41,14 @@ function draw() {
 
 function isDraw() {
 	if (!mouseIsPressed) return false
-	let r1 = dist(mouseX, mouseY, SIZE, SIZE)
-	if (r1 > SIZE) return false
-	let r2 = dist(pmouseX, pmouseY, SIZE, SIZE)
-	if (r2 > SIZE) return false
+	if(mouseX < 0 || mouseX > width) return false
+	if(mouseY < 0 || mouseY > height) return false
+	if(pmouseX < 0 || pmouseX > width) return false
+	if(pmouseY < 0 || pmouseY > height) return false
 	return true
+}
+
+function saveCurrentCanvas() {
+	let filename = `Snowflake_${(new Date()).getTime()}`
+	saveCanvas(myCanvas, filename, 'png');
 }

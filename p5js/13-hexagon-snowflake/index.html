@@ -25,14 +25,22 @@
 			margin-top: 10px;
 			background: black;
 			border: 2px solid white;
-			padding: 10px;
+			padding: 10px 20px;
 			font-size: 14px;
 			color: white;
+			margin-right: 20px;
+			cursor: pointer;
+		}
+		button:last-child {
+			margin-right: 0;
 		}
 	</style>
 </head>
 <body>
 	<div id='canvasContainer'></div>
-	<button onclick="window.location.reload()">Reload</button>
+	<div>
+			<button onclick="window.location.reload()">Reload</button>
+			<button onclick="saveCurrentCanvas()">Save</button>
+	</div>
 </body>
 </html>
