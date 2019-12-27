@@ -18,9 +18,10 @@ A repository to store my javascript code library
 10. [Ray Casting](https://hanifanm.github.io/p5js/10-ray-casting)
 11. [NeuroEvolution Car](https://hanifanm.github.io/p5js/11-line-follower)
 12. [Animating Fourier Transform](https://hanifanm.github.io/p5js/12-animating-fourier-transform)
+12. [Hexagonal Snowflake](https://hanifanm.github.io/p5js/13-hexagon-snowflake)
 
 ## Web Remake
 
 1. [Simple Remake Pinterest](https://hanifanm.github.io/web-remake/pinterest)
-2. [National Geographic](https://hanifanm.github.io/web-remake/nationalgeographic) - On Going
+2. [National Geographic](https://hanifanm.github.io/web-remake/nationalgeographic) - Idle
 <!-- 2. [Pokedex](https://hanifanm.github.io/web-remake/pokedex/out) -->
