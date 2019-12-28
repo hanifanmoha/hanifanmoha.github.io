@@ -43,16 +43,10 @@ function isDraw() {
 	let status = true
 	status = status && customMouseIsPressed
 	customMouseIsPressed = mouseIsPressed
-	console.log(status)
 	status = status && !(mouseX < 0 || mouseX > width)
-	console.log(status)
 	status = status && !(mouseY < 0 || mouseY > height)
-	console.log(status)
 	status = status && !(pmouseX < 0 || pmouseX > width)
-	console.log(status)
 	status = status && !(pmouseY < 0 || pmouseY > height)
-	console.log(status)
-	console.log('====================')
 	return status
 }
 
