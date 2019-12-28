@@ -2,14 +2,14 @@ const REPEAT = 12
 const MIRROR = true
 
 let SIZE
-
 let myCanvas
+let customMouseIsPressed = false
 
 function setup() {
 	if(windowWidth < windowHeight) {
 		SIZE = windowWidth / 2 - 10
 	} else {
-		SIZE = windowHeight / 2 - 40
+		SIZE = windowHeight / 2 - 80
 	}
 	myCanvas = createCanvas(SIZE*2, SIZE*2)
 	myCanvas.parent('canvasContainer')
@@ -40,12 +40,20 @@ function draw() {
 }
 
 function isDraw() {
-	if (!mouseIsPressed) return false
-	if(mouseX < 0 || mouseX > width) return false
-	if(mouseY < 0 || mouseY > height) return false
-	if(pmouseX < 0 || pmouseX > width) return false
-	if(pmouseY < 0 || pmouseY > height) return false
-	return true
+	let status = true
+	status = status && customMouseIsPressed
+	customMouseIsPressed = mouseIsPressed
+	console.log(status)
+	status = status && !(mouseX < 0 || mouseX > width)
+	console.log(status)
+	status = status && !(mouseY < 0 || mouseY > height)
+	console.log(status)
+	status = status && !(pmouseX < 0 || pmouseX > width)
+	console.log(status)
+	status = status && !(pmouseY < 0 || pmouseY > height)
+	console.log(status)
+	console.log('====================')
+	return status
 }
 
 function saveCurrentCanvas() {
