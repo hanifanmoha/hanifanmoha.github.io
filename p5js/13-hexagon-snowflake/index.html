@@ -9,6 +9,7 @@
 
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
 	<script src="sketch.js"></script>
 
 	<style>
@@ -21,9 +22,9 @@
 			flex-direction: column;
 			align-items: center;
 		}
-                p {
-                        color : white;
-                }
+		p {
+						color : white;
+		}
 		button {
 			margin-top: 10px;
 			background: black;
@@ -34,9 +35,9 @@
 			margin-right: 20px;
 			cursor: pointer;
 		}
-                canvas {
-                        border : 2px solid white;
-                }
+		canvas {
+						border : 2px solid white;
+		}
 		button:last-child {
 			margin-right: 0;
 		}
@@ -46,7 +47,7 @@
         <p>Put your sign in the box</p>
 	<div id='canvasContainer'></div>
 	<div>
-			<button onclick="window.location.reload()">Reload</button>
+			<button onclick="reset()">Clear</button>
 			<button onclick="saveCurrentCanvas()">Save</button>
 	</div>
 </body>

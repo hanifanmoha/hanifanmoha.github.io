@@ -3,9 +3,18 @@ const MIRROR = true
 
 let SIZE
 let myCanvas
+let natureSound
 let customMouseIsPressed = false
 
+function reset(onload) {
+	if(!onload) {
+		natureSound.play()
+	}
+	background(0)
+}
+
 function setup() {
+  natureSound = loadSound('NatureVoice.mp3');
 	if(windowWidth < windowHeight) {
 		SIZE = windowWidth / 2 - 10
 	} else {
@@ -14,7 +23,7 @@ function setup() {
 	myCanvas = createCanvas(SIZE*2, SIZE*2)
 	myCanvas.parent('canvasContainer')
 	angleMode(DEGREES)
-	background(0)
+	reset(true)
 }
 
 function draw() {
