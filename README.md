@@ -4,6 +4,9 @@ by **Mohamad Hanifan**
 
 A repository to store my javascript code library
 
+## Projects
+1. [Robust Image Watermarking - On Progress, Doakan](https://hanifanm.github.io/robust-image-watermarking)
+
 ## Playing with p5.js
 
 1. [Lissajous Table](https://hanifanm.github.io/p5js/1-lissajous-table)
