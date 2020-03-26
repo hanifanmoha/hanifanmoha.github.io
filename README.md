@@ -23,6 +23,7 @@ A repository to store my javascript code library
 12. [Animating Fourier Transform](https://hanifanm.github.io/p5js/12-animating-fourier-transform)
 13. [Hexagonal Snowflake](https://hanifanm.github.io/p5js/13-hexagon-snowflake)
 14. [Particle Force](https://hanifanm.github.io/p5js/14-particle-force)
+15. [Infection](https://hanifanm.github.io/p5js/15-infection)
 
 ## Web Remake
 
