@@ -2,31 +2,18 @@
 
 by **Mohamad Hanifan**
 
-A repository to store my javascript code library
-
-## Projects
-1. [Robust Image Watermarking - On Progress, Doakan](https://hanifanm.github.io/robust-image-watermarking)
+A repository to store my incapabilities
 
 ## Playing with p5.js
 
-1. [Lissajous Table](https://hanifanm.github.io/p5js/1-lissajous-table)
-2. [Neuroevolution String](https://hanifanm.github.io/p5js/2-neuroevolution-string)
-3. [Inverse Kinematics](https://hanifanm.github.io/p5js/3-inverse-kinematics)
-4. [Smart Rocket - Genetic Algorithm](https://hanifanm.github.io/p5js/4-smart-rocket)
-5. [Sudoku - Brute Force](https://hanifanm.github.io/p5js/5-sudoku-brute-force)
-6. [Chaos Game](https://hanifanm.github.io/p5js/6-chaos-game)
-7. [Vintage Snake Game](https://hanifanm.github.io/p5js/7-snake-game)
-8. [Dot Sketch](https://hanifanm.github.io/p5js/8-dot-sketch)
-9. [Bird Flocking Simulation](https://hanifanm.github.io/p5js/9-bird-flocking-simulation)
-10. [Ray Casting](https://hanifanm.github.io/p5js/10-ray-casting)
-11. [NeuroEvolution Car](https://hanifanm.github.io/p5js/11-line-follower)
-12. [Animating Fourier Transform](https://hanifanm.github.io/p5js/12-animating-fourier-transform)
-13. [Hexagonal Snowflake](https://hanifanm.github.io/p5js/13-hexagon-snowflake)
-14. [Particle Force](https://hanifanm.github.io/p5js/14-particle-force)
-15. [Infection](https://hanifanm.github.io/p5js/15-infection)
-
-## Web Remake
-
-1. [Simple Remake Pinterest](https://hanifanm.github.io/web-remake/pinterest)
-2. [National Geographic](https://hanifanm.github.io/web-remake/nationalgeographic) - Idle
-<!-- 2. [Pokedex](https://hanifanm.github.io/web-remake/pokedex/out) -->
+1. [Boids Simulation](https://editor.p5js.org/hanifanm/full/ARN4X_Hge)
+2. [Fouries Series Animatio](https://editor.p5js.org/hanifanm/full/W5HV5npY1)
+3. [Game Of Life](https://editor.p5js.org/hanifanm/full/XtH8ISxFI)
+4. [Hexagon Snowflake](https://editor.p5js.org/hanifanm/full/FJa8uRyq-)
+5. [Inverse Kinematics](https://editor.p5js.org/hanifanm/full/A5GafiSIe)
+6. [Lissajous Table](https://editor.p5js.org/hanifanm/full/W4Eo67Bxb)
+7. [Mandelbrot](https://editor.p5js.org/hanifanm/full/LQCjU7s-8)
+8. [Particle Forces](https://editor.p5js.org/hanifanm/full/WfxT9Zxgv)
+9. [Ray Casting](https://editor.p5js.org/hanifanm/full/TEpJmiM6-)
+10. [Snake Game](https://editor.p5js.org/hanifanm/full/rE7LocWKq)
+11. [Tic Tac Toe](https://editor.p5js.org/hanifanm/full/rgK-oD_Wm)
