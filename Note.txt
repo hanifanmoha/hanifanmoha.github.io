@@ -1,0 +1,6 @@
+Development:
+- npm run dev
+
+Deployment:
+- push to main branch
+- github will build it
