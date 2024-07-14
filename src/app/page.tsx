@@ -1,6 +1,8 @@
-import styles from './page.module.css'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+
+import styles from './page.module.css'
+
 import { getMarkdownContent } from '@/utils/read-file'
 
 export default function Home() {
@@ -8,7 +10,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{contents}</ReactMarkdown>
+        <div className='markdown-body'>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{contents}</ReactMarkdown>
+        </div>
       </div>
     </main>
   )
