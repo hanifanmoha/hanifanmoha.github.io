@@ -1,7 +1,7 @@
 .main {
   flex: 1;
   width: 100%;
-  max-width: 680px;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
