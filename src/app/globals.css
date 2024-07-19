@@ -23,6 +23,16 @@ a {
   text-decoration: none;
 }
 
+.main-container {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  border-radius: 8px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
