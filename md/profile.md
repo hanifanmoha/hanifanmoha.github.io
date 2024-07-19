@@ -16,41 +16,104 @@ _Mostly doing softwre engineering_
 
 ## Working Experience
 
-### **eFishery ( PT. Multidaya Teknologo Nusantara )**
+<div style="display: flex; justify-content: space-between;">
 
-_Engineering Manager (January 2023 - Present)_
+  <div style="flex: 1; margin-right: 10px;">
+    <p><strong>August 2020 - Present</strong></p>
+  </div>
 
-_Technical Lead (January 2021 - December 2023)_
+  <div style="flex: 2;">
+    <h3 style="margin-top: 0">eFishery ( PT. Multidaya Teknologi Nusantara )</h3>
+    <h4>Software Engineer / Engineering Manager</h4>
+    <ul>
+      <li>Created a feed transaction system for farmers to handle transactions worth hundreds of millions daily</li>
+      <li>Designed a mobile application to support sales processes used by over 100 sales teams daily</li>
+      <li>Built anti-fraud and risk management systems</li>
+      <li>Developed an employee management system</li>
+    </ul>
+  </div>
 
-_Software Engineer (August 2020 - December 2022)_
+</div>
 
-### **Toppan Ecquaria Pte. Ltd**
+<div style="display: flex; justify-content: space-between;">
 
-_Software Engineer (August 2019 - July 2020)_
+  <div style="flex: 1; margin-right: 10px;">
+    <p><strong>August 2019 - July 2020</strong></p>
+  </div>
 
-### **Meridian.ID**
+  <div style="flex: 2;">
+    <h3 style="margin-top: 0">Toppan Ecquaria Pte. Ltd.</h3>
+    <h4>Software Engineer</h4>
+    <ul>
+      <li>Developed web and mobile software solutions for government applications</li>
+    </ul>
+  </div>
 
-_Software Engineer (August 2018 - June 2019)_
+</div>
 
-### **Samsung Research & Development Indonesia (SRIN)**
+<div style="display: flex; justify-content: space-between;">
 
-_Software Engineer (February 2017 - June 2018)_
+  <div style="flex: 1; margin-right: 10px;">
+    <p><strong>August 2018 - June 2019</strong></p>
+  </div>
+
+  <div style="flex: 2;">
+    <h3 style="margin-top: 0">Meridian.ID</h3>
+    <h4>Software Engineer</h4>
+    <ul>
+      <li>Developed web-based software for clients with a focus on UI/UX</li>
+    </ul>
+  </div>
+
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+
+  <div style="flex: 1; margin-right: 10px;">
+    <p><strong>February 2017 - June 2018</strong></p>
+  </div>
+
+  <div style="flex: 2;">
+    <h3 style="margin-top: 0">Meridian.ID</h3>
+    <h4>Software Engineer</h4>
+    <ul>
+      <li>Conducted research to drive technological advancements at Samsung</li>
+      <li>Developed software solutions for Samsung Mobile customers</li>
+      <li>Created software to enhance and support business processes within the company</li>
+    </ul>
+  </div>
+
+</div>
 
 ---
 
 ## 🎓 Education
 
-**Bachelor of Engineering : Engineering Physics**
+<div style="display: flex; justify-content: space-between;">
 
-_Institut Teknologi Bandung - Bandung, Indonesia_
+  <div style="flex: 1; margin-right: 10px;">
+    <p><strong>2018 - 2020</strong></p>
+  </div>
 
-_2012 - 2017_
+  <div style="flex: 2;">
+    <h3 style="margin-top: 0">Master of Engineering  : Informatics Engineering</h3>
+    <p>Institut Teknologi Bandung - Bandung, Indonesia</p>
+  </div>
 
-**Master of Engineering : Informatics Engineering**
+</div>
 
-_Institut Teknologi Bandung - Bandung, Indonesia_
+<div style="display: flex; justify-content: space-between;">
 
-_2018 - 2020_
+  <div style="flex: 1; margin-right: 10px;">
+    <p><strong>2012 - 2017</strong></p>
+  </div>
+
+  <div style="flex: 2;">
+    <h3 style="margin-top: 0">Bachelor of Engineering : Engineering Physics</h3>
+    <p>Institut Teknologi Bandung - Bandung, Indonesia</p>
+  </div>
+
+</div>
 
 ---
 

@@ -7,7 +7,7 @@ import 'github-markdown-css/github-markdown-dark.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Hi!',
+  title: 'Mohamad Hanifan',
 }
 
 export default function RootLayout({
