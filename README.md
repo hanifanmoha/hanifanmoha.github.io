@@ -177,3 +177,47 @@ _Mostly doing softwre engineering_
 - **Engineering**: Have a scientific background in control, measurement or electrical engineering
 
 - **Law**: Maybe I still remember a little about Newton's Law, Kirchhoff's Law or Gauss's Law
+
+---
+
+## 🌵 After Office Projects
+
+<div style="border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-bottom: 12px">
+  <h4>[WIP] <a href="https://no-land.vercel.app/">Noland</a></h4>
+  <p>Simple mock api generator to boost development process for front end developer</p>
+  <a href="https://no-land-deprecated.vercel.app/">Previous Version</a>
+  <p>
+    <code>Next JS</code>
+    <code>Vercel</code>
+  </p>
+</div>
+<div style="border: 1px solid #30363d; padding: 20px;border-radius: 8px; margin-bottom: 12px">
+  <h4><a href="https://dvdrentalapi.vercel.app/">DVD Rental API</a></h4>
+  <p>Sample API based on postgresql sample database. Documentation currently in proress.</p>
+  <p>
+    <code>Express JS</code>
+    <code>Vercel</code>
+  </p>
+</div>
+<div style="border: 1px solid #30363d; padding: 20px;border-radius: 8px; margin-bottom: 12px">
+  <h4>Tinkering with p5.js</h4>
+  <ol dir="auto">
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/ARN4X_Hge" rel="nofollow">Boids Simulation</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/W5HV5npY1" rel="nofollow">Fouries Series Animatio</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/XtH8ISxFI" rel="nofollow">Game Of Life</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/FJa8uRyq-" rel="nofollow">Hexagon Snowflake</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/A5GafiSIe" rel="nofollow">Inverse Kinematics</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/W4Eo67Bxb" rel="nofollow">Lissajous Table</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/LQCjU7s-8" rel="nofollow">Mandelbrot</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/WfxT9Zxgv" rel="nofollow">Particle Forces</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/TEpJmiM6-" rel="nofollow">Ray Casting</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/rE7LocWKq" rel="nofollow">Snake Game</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/rgK-oD_Wm" rel="nofollow">Tic Tac Toe</a></li>
+    <li><a href="https://editor.p5js.org/hanifanmoha/full/663GG3Y8f" rel="nofollow">Memory Logic Gate</a></li>
+  </ol>
+  <p>
+    <code>p5.js</code>
+  </p>
+</div>
+
+---
