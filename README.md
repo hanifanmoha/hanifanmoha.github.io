@@ -198,7 +198,7 @@ _Mostly doing softwre engineering_
 </div>
 <div style="border: 1px solid #30363d; padding: 20px;border-radius: 8px; margin-bottom: 12px">
   <h4><a href="https://dvdrentalapi.vercel.app/">DVD Rental API</a></h4>
-  <p>Sample API based on postgresql sample database. Documentation currently in proress.</p>
+  <p>Sample API based on postgresql sample database.</p>
   <p>
     <code>Express JS</code>
     <code>Vercel</code>
