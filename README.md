@@ -6,9 +6,14 @@ _Mostly doing softwre engineering_
 
 ## ⛺ Contact
 
+#### Main
+
 - **Email**: hanifanmohamad@gmail.com
 - **LinkedIn**: [https://www.linkedin.com/in/hanifanmoha/](https://www.linkedin.com/in/hanifanmoha/)
 - **GitHub**: [https://github.com/hanifanmoha](https://github.com/hanifanmoha)
+
+#### Others
+
 - **Hackerrank**: [https://www.hackerrank.com/profile/hanifanmoha](https://www.hackerrank.com/profile/hanifanmoha)
 - **Leetcode**: [https://leetcode.com/u/hanifanmoha/](https://leetcode.com/u/hanifanmoha/)
 
