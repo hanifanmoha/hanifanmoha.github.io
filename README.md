@@ -4,7 +4,7 @@ _Mostly doing softwre engineering_
 
 ---
 
-## 📧 Contact
+## ⛺ Contact
 
 - **Email**: hanifanmohamad@gmail.com
 - **LinkedIn**: [https://www.linkedin.com/in/hanifanmoha/](https://www.linkedin.com/in/hanifanmoha/)
@@ -14,7 +14,7 @@ _Mostly doing softwre engineering_
 
 ---
 
-## Working Experience
+## 👷 Working Experience
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 32px;">
 
@@ -26,10 +26,10 @@ _Mostly doing softwre engineering_
     <h3 style="margin-top: 0">eFishery ( PT. Multidaya Teknologi Nusantara )</h3>
     <h4>Software Engineer / Engineering Manager</h4>
     <ul>
-      <li>Created a feed transaction system for farmers to handle transactions worth hundreds of millions daily</li>
+      <li>Created a feed transaction ecosystem for farmers and internal team to handle transactions worth hundreds of millions daily</li>
       <li>Designed a mobile application to support sales processes used by over 100 sales teams daily</li>
-      <li>Built anti-fraud and risk management systems</li>
-      <li>Developed an employee management system</li>
+      <li>Building an anti-fraud and risk management system that is integrated with the efishery transaction platform</li>
+      <li>Develop and maintain an employee management system that is integrated with 3rd party applications</li>
     </ul>
     <p>
       <code>Google Sheet</code>
@@ -83,7 +83,7 @@ _Mostly doing softwre engineering_
     <h3 style="margin-top: 0">Meridian.ID</h3>
     <h4>Software Engineer</h4>
     <ul>
-      <li>Developed web-based software for clients with a focus on UI/UX</li>
+      <li>Developed web-based software for clients with a focus on UI/UX, starting from the company profile to end to end application management</li>
     </ul>
     <p>
       <code>React JS</code>
@@ -121,7 +121,7 @@ _Mostly doing softwre engineering_
 
 ---
 
-## 🎓 Education
+## 🏫 Education
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 32px;">
 
@@ -132,6 +132,10 @@ _Mostly doing softwre engineering_
   <div style="flex: 2;">
     <h3 style="margin-top: 0">Master of Engineering  : Informatics Engineering</h3>
     <p>Institut Teknologi Bandung - Bandung, Indonesia</p>
+    <ul>
+      <li>Courses: <strong>computer science</strong>, security, computation, image processing, machine learning</li>
+      <li>Final Project: Improved Robust Image Watermarking with Polar Harmonic Transform Against Translation Attack</li>
+    </ul>
   </div>
 
 </div>
@@ -145,13 +149,28 @@ _Mostly doing softwre engineering_
   <div style="flex: 2;">
     <h3 style="margin-top: 0">Bachelor of Engineering : Engineering Physics</h3>
     <p>Institut Teknologi Bandung - Bandung, Indonesia</p>
+    <ul>
+      <li>Courses: control, electronics, physics, measurement, material, etc</li>
+      <li>Final Project: 
+        <a href="https://www.researchgate.net/publication/319012269_Design_of_Hybrid_Solar_and_Wind_Energy_Harvester_for_Fishing_Boat">Design of Hybrid Solar and Wind Energy Harvester for Fishing Boat</a>,
+        <a href="https://www.researchgate.net/publication/319012269_Design_of_Hybrid_Solar_and_Wind_Energy_Harvester_for_Fishing_Boat">Study of Vertical Axis Wind Turbine for Energy Harvester in A Fishing Boat</a>
+      </li>
+    </ul>
   </div>
 
 </div>
 
 ---
 
-## 💡 Skills
+## 🌟 Achievements
+
+- 2021 - US Patent Publication : [US11074024B2 Mobile device for interacting with docking device and method for controlling same](https://patents.google.com/patent/US11074024B2)
+
+- 2018 - Samsung Sofware Certification : Pro
+
+---
+
+## 🤹 Skills
 
 - **Software Engineering**: Experienced in both frontend and backend, mobile Android & iOS, or maybe anything else if the world needs
 
