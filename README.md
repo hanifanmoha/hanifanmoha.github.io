@@ -11,6 +11,7 @@ _Mostly doing softwre engineering_
 - **Email**: hanifanmohamad@gmail.com
 - **LinkedIn**: [https://www.linkedin.com/in/hanifanmoha/](https://www.linkedin.com/in/hanifanmoha/)
 - **GitHub**: [https://github.com/hanifanmoha](https://github.com/hanifanmoha)
+- [**Download My CV**](https://drive.google.com/file/d/1pT1EvQkzxaA3hRyPh401r1IPMxKoQdjI/view)
 
 #### Others
 
