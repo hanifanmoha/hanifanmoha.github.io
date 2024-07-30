@@ -107,7 +107,7 @@ _Mostly doing softwre engineering_
   </div>
 
   <div style="flex: 2;">
-    <h3 style="margin-top: 0">Meridian.ID</h3>
+    <h3 style="margin-top: 0">Samsung R&D Indonesia (SRIN)</h3>
     <h4>Software Engineer</h4>
     <ul>
       <li>Conducted research to drive technological advancements at Samsung</li>
