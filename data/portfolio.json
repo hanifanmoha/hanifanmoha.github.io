@@ -1,0 +1,98 @@
+{
+  "name": "Mohamad Hanifan",
+  "title": "Engineering, mostly software",
+  "bio": "Experienced software engineer with a strong background in full-stack development, mobile applications, and engineering management. Skilled in creating efficient solutions for various industries, from agriculture technology to government applications.",
+  "experience": [
+    {
+      "company": "eFishery / PT Multidaya Teknologi Nusantara",
+      "position": "Software Engineer - (Front End / Engineering Manager)",
+      "duration": "August 2020 - Present",
+      "location": "Bandung, ID",
+      "description": [
+        "Created a feed transaction ecosystem for farmers and internal team to handle transactions worth hundreds of millions daily.",
+        "Designed a mobile application to support sales processes used by over 100 sales teams daily.",
+        "Built an anti-fraud and risk management system integrated with the eFishery transaction platform.",
+        "Developed and maintained an employee management system integrated with 3rd party applications."
+      ],
+      "skills": ["Google Sheet", "React JS", "GraphQL", "Golang", "PostgreSQL", "Redis", "Moodle", "Strapi", "Kafka", "Debezium", "RabbitMQ", "Kubernetes"]
+    },
+    {
+      "company": "Toppan Ecquaria Pte. Ltd",
+      "position": "Software Engineer - Full Stack",
+      "duration": "August 2019 - July 2020",
+      "location": "Bandung, ID",
+      "description": [
+        "Developed web and mobile software solutions for government applications."
+      ],
+      "skills": ["PHP", "WordPress", "Ajax", "Xcode", "Swift", "Java Spring"]
+    },
+    {
+      "company": "Meridian ID",
+      "position": "Software Engineer - Front End",
+      "duration": "August 2018 - June 2019",
+      "location": "Bandung, ID",
+      "description": [
+        "Developed web-based software for clients with a focus on UI/UX, starting from company profiles to end-to-end application management."
+      ],
+      "skills": ["React JS", "Laravel", "PostgreSQL"]
+    },
+    {
+      "company": "Samsung RnD Indonesia (SRIN)",
+      "position": "Software Engineer",
+      "duration": "February 2017 - June 2018",
+      "location": "Jakarta, ID",
+      "description": [
+        "Conducted research to drive technological advancements at Samsung.",
+        "Developed software solutions for Samsung Mobile customers.",
+        "Created software to enhance and support business processes within the company."
+      ],
+      "skills": ["Android", "Java", "Kotlin", "React JS", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master Degree of Informatics Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "location": "Bandung, ID",
+      "year": "2020",
+      "courses": ["Computer Science", "Security", "Computation", "Image Processing", "Machine Learning"],
+      "finalProjects": [
+        {
+          "title": "Improved Robust Image Watermarking with Polar Harmonic Transform Against Translation Attack",
+          "link": null
+        }
+      ]
+    },
+    {
+      "degree": "Bachelor Degree of Engineering Physics",
+      "institution": "Institut Teknologi Bandung",
+      "location": "Bandung, ID",
+      "year": "2017",
+      "courses": ["Control", "Electronics", "Physics", "Measurement", "Material"],
+      "finalProjects": [
+        {
+          "title": "Design of Hybrid Solar and Wind Energy Harvester for Fishing Boat",
+          "link": "https://www.researchgate.net/publication/319012269_Design_of_Hybrid_Solar_and_Wind_Energy_Harvester_for_Fishing_Boat"
+        },
+        {
+          "title": "Study of Vertical Axis Wind Turbine for Energy Harvester in A Fishing Boat",
+          "link": "https://www.researchgate.net/publication/319014586_Study_of_Vertical_Axis_Wind_Turbine_for_Energy_Harvester_in_A_Fishing_Boat"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Paper Publication: Mobile device for interacting with docking device and method for controlling same",
+      "issuer": "Samsung",
+      "year": "2021",
+      "link": "https://patents.google.com/patent/US11074024B2"
+    },
+    {
+      "title": "Samsung Software Certification - Pro",
+      "issuer": "SRIN",
+      "year": "2018"
+    }
+  ]
+}
+
