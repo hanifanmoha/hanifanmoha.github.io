@@ -44,31 +44,8 @@ export function LightBlogContent({ initialPosts }: LightBlogContentProps) {
                         style={{ height: "400px" }}
                     >
                         {post.content.map(content =>
-                            <SwiperSlide className="p-6 overflow-y-auto">
-                                <ReactMarkdown
-                                    components={{
-                                        pre: ({ node, ...props }) => (
-                                            <pre className="bg-gray-100 rounded-lg p-4 my-4 overflow-x-auto" {...props} />
-                                        ),
-                                        code: ({ node, className, children, ...props }) => {
-                                            const match = /language-(\w+)/.exec(className || "")
-                                            if (match) {
-                                                return (
-                                                    <pre className="bg-gray-100 rounded-lg p-4 my-4 overflow-x-auto">
-                                                        <code className={`language-${match[1]} text-sm`} {...props}>
-                                                            {children}
-                                                        </code>
-                                                    </pre>
-                                                )
-                                            }
-                                            return (
-                                                <code className="bg-gray-100 text-sm px-1.5 py-0.5 rounded font-mono" {...props}>
-                                                    {children}
-                                                </code>
-                                            )
-                                        },
-                                    }}
-                                >
+                            <SwiperSlide className="p-6 overflow-y-auto prose">
+                                <ReactMarkdown>
                                     {content}
                                 </ReactMarkdown>
                             </SwiperSlide>)}
