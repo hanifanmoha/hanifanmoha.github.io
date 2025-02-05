@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @import 'swiper/css';
-/* @import 'swiper/css/navigation'; */
+@import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
-/* @import 'swiper/css/scrollbar'; */
 
 body {
   font-family: Arial, Helvetica, sans-serif;

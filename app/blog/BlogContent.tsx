@@ -1,7 +1,7 @@
 "use client"
 
 import ReactMarkdown from "react-markdown"
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -40,11 +40,12 @@ export function LightBlogContent({ initialPosts }: LightBlogContentProps) {
 
                     <Swiper
                         pagination={true}
-                        modules={[Pagination]}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
                         style={{ height: "400px" }}
                     >
-                        {post.content.map(content =>
-                            <SwiperSlide className="p-6 overflow-y-auto prose">
+                        {post.content.map((content, index) =>
+                            <SwiperSlide key={index} className="px-12 py-6 overflow-y-auto prose">
                                 <ReactMarkdown>
                                     {content}
                                 </ReactMarkdown>
