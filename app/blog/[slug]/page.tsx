@@ -4,9 +4,24 @@ import matter from "gray-matter"
 import Gallery from "./Gallery"
 import { Post } from "@/lib/types"
 
-async function getPost(): Promise<Post | null> {
+export async function generateStaticParams() {
     try {
-        const filePath = path.join(process.cwd(), "data", "blog-posts", "importance-of-code-reviews.md")
+        const jsonPath = path.join(process.cwd(), "data", "blog-posts.json")
+        const jsonContents = fs.readFileSync(jsonPath, "utf8")
+        const posts = JSON.parse(jsonContents)
+        return posts.map((post: { slug: string }) => ({
+            slug: post.slug,
+        }))
+    } catch (error) {
+        console.error("Error reading post file:", error)
+        return []
+    }
+}
+
+
+async function getPost(slug: string): Promise<Post | null> {
+    try {
+        const filePath = path.join(process.cwd(), "data", "blog-posts", `${slug}.md`)
         const fileContents = fs.readFileSync(filePath, "utf8")
         const { content } = matter(fileContents)
         return {
@@ -18,8 +33,8 @@ async function getPost(): Promise<Post | null> {
     }
 }
 
-export default async function Page() {
-    const post = await getPost()
+export default async function Page({ params }: { params: { slug: string } }) {
+    const post = await getPost(params.slug || '')
 
     return <div>
         <Gallery post={post} />
