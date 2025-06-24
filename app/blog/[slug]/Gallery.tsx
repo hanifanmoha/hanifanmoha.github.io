@@ -10,18 +10,19 @@ interface GalleryProps {
 }
 
 export default function Gallery({ post }: GalleryProps) {
+
   if (!post) {
     return <div>404 | Post not found</div>;
   }
 
   return (
-    <div>
+    <div className='h-[100vh] flex flex-col'>
       <Swiper
         pagination={true}
         navigation={true}
         modules={[Pagination, Navigation]}
         style={styles.swiper}
-        className='h-[80vh] w-full'
+        className='w-full flex-1'
       >
         {post.content.map((content, index) => (
           <SwiperSlide key={index} className="overflow-y-auto">
