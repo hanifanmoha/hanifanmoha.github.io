@@ -37,6 +37,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const post = await getPost(params.slug || '')
 
     return <div>
-        <Gallery post={post} />
+        <Gallery post={post} slug={params.slug || ''} />
     </div>
 }

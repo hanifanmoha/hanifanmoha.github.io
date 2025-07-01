@@ -1,17 +1,10 @@
 [
   {
-    "slug": "understanding-constants-in-clean-code",
-    "title": "Understanding the Power of Constants in Clean Code",
-    "date": "2023-05-20"
-  },
-  {
-    "slug": "importance-of-code-reviews",
-    "title": "The Importance of Code Reviews in Software Development",
-    "date": "2023-05-25"
-  },
-  {
     "slug": "test-markdown",
-    "title": "Testing rendering of Markdown",
-    "date": "2023-05-25"
+    "title": "Testing rendering of Markdown"
+  },
+  {
+    "slug": "binary-tree-general",
+    "title": "Pohon Biner"
   }
 ]
