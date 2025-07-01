@@ -1,3 +1,31 @@
+# Analogi Binary Search Tree : Dunia Fantasi
+
+![BST Analogy](bst-analogy.svg)
+
+Di dunia fantasi ini, ada beberapa aturan:
+- Semua orang boleh memiliki 1 nomor favorit
+- Semua orang boleh memiliki maksimal seorang anak lelaki dan seorang anak perempuan
+- Anak laki-laki dan seluruh keturunannya harus memiliki nomor favorit < orang tuanya
+- Anak perempuan dan seluruh keturunannya harus memiliki nomor favorit > orang tuanya
+
+##########
+
+# Pertanyaan:
+
+> Bagaimana cara mencari apakah di dunia ini  ada orang dengan nomor favorit 38?
+
+##########
+
+![BST Analogy Search](bst-analogy-search.svg)
+
+- Untuk menemukan seseorang dengan nomor favorit 38, kita mulai dari orang pertama.
+- Orang pertama memiliki nomor favorit 21. Karena 21 < 38, pasti nomor 38 ada pada anak perempuannya atau keturunannya.
+- Anak perempuan 21 memiliki nomor favorit 35. Karena 35 < 38, pasti nomor 38 ada pada anak peremuannyanya lagi atau keturunannya.
+- Anak perempuan 35 memiliki nomor favorit 42. Karena 38 < 42, pasti nomor 38 ada pada anak lelakinya atau keturunannya.
+- Anak lelaki 35 memiliki nomor favorit 38. Inilah orang yang kita cari!
+
+##########
+
 # Apa itu Binary Search Tree?
 
 `Binary Tree` / `Binary Search Tree` / `Pohon Biner` biasa disingkat BST.
