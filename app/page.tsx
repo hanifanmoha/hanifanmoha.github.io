@@ -9,7 +9,7 @@ interface Experience {
   position: string
   duration: string
   location: string
-  description: string[]
+  description?: string[]
   skills: string[]
 }
 
@@ -35,10 +35,10 @@ interface Certification {
 interface PortfolioData {
   name: string
   title: string
-  bio: string
+  bio?: string
   experience: Experience[]
   education: Education[]
-  certifications: Certification[]
+  certifications?: Certification[]
 }
 
 function getPortfolioData(): PortfolioData {
@@ -71,10 +71,10 @@ export default function Home() {
         </div>
 
         <div className="space-y-16">
-          <section>
+          {portfolioData.bio && <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">About</h2>
             <p className="text-gray-600 text-lg leading-relaxed">{portfolioData.bio}</p>
-          </section>
+          </section>}
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Experience</h2>
@@ -91,14 +91,14 @@ export default function Home() {
                       <p className="text-gray-500 mt-1">{exp.location}</p>
                     </div>
                   </div>
-                  <ul className="mt-4 space-y-2 text-gray-600">
+                  {exp.description && <ul className="mt-4 space-y-2 text-gray-600">
                     {exp.description.map((desc, i) => (
                       <li key={i} className="flex items-start">
                         <span className="mr-2">•</span>
                         <span>{desc}</span>
                       </li>
                     ))}
-                  </ul>
+                  </ul>}
                   <div className="mt-4">
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, i) => (
@@ -164,7 +164,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section>
+          {portfolioData.certifications && <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Certifications</h2>
             <div className="space-y-8">
               {portfolioData.certifications.map((cert, index) => (
@@ -189,7 +189,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </section>
+          </section>}
         </div>
       </div>
     </PortoLayout>

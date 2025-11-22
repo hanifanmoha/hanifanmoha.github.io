@@ -8,10 +8,9 @@
   },
   {
     "id": "2",
-    "title": "Ingak",
-    "description": "Simple memory game",
-    "imageUrl": "https://raw.githubusercontent.com/hanifanmoha/memory-app/refs/heads/main/preview.png",
-    "projectUrl": "https://ingak.netlify.app/?lvl=20"
+    "title": "Fake Mailbox",
+    "description": "Sanbox App to Send Mock Email via HTTP",
+    "imageUrl": "https://raw.githubusercontent.com/hanifanmoha/hanifanmoha.github.io/refs/heads/main/public/images/projects/fake-mailbox.png",
+    "projectUrl": "https://fake-mailbox.vercel.app/"
   }
 ]
-
