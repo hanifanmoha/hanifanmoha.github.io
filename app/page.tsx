@@ -19,7 +19,7 @@ interface Education {
   location: string
   year: string
   courses: string[]
-  finalProjects: {
+  finalProjects?: {
     title: string
     link: string | null
   }[]
@@ -139,7 +139,7 @@ export default function Home() {
                         ))}
                       </div>
                     </div>
-                    <div>
+                    {edu.finalProjects && <div>
                       <h4 className="text-sm font-medium text-gray-900">Final Projects</h4>
                       {edu.finalProjects.map((project, i) => (
                         <div key={i} className="mt-2">
@@ -157,7 +157,7 @@ export default function Home() {
                           )}
                         </div>
                       ))}
-                    </div>
+                    </div>}
                   </div>
                 </div>
               ))}

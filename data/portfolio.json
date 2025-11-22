@@ -12,12 +12,11 @@
         ""
       ],
       "skills": [
-        "PHP",
-        "WordPress",
-        "Ajax",
-        "Xcode",
-        "Swift",
-        "Java Spring"
+        "Golang",
+        "Ruby on Rails",
+        "Kubernetes",
+        "Docker",
+        "Next JS"
       ]
     },
     {
@@ -109,7 +108,7 @@
         "Image Processing",
         "Machine Learning"
       ],
-      "finalProjects": [
+      "_finalProjects": [
         {
           "title": "Improved Robust Image Watermarking with Polar Harmonic Transform Against Translation Attack",
           "link": null
@@ -128,7 +127,7 @@
         "Measurement",
         "Material"
       ],
-      "finalProjects": [
+      "_finalProjects": [
         {
           "title": "Design of Hybrid Solar and Wind Energy Harvester for Fishing Boat",
           "link": "https://www.researchgate.net/publication/319012269_Design_of_Hybrid_Solar_and_Wind_Energy_Harvester_for_Fishing_Boat"
