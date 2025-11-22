@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-interface LightBlogPost {
+export interface LightBlogPost {
     slug: string
     title: string
     published: boolean

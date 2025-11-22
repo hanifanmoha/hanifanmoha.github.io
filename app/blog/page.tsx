@@ -1,14 +1,7 @@
 import fs from "fs"
 import path from "path"
-import { LightBlogContent } from "./BlogContent"
+import { LightBlogContent, LightBlogPost } from "./BlogContent"
 import PortoLayout from "../PortoLayout"
-
-interface LightBlogPost {
-  slug: string
-  title: string
-  description?: string
-  date?: string
-}
 
 async function getLightBlogPosts(): Promise<LightBlogPost[]> {
   const jsonPath = path.join(process.cwd(), "data", "blog-posts.json")
