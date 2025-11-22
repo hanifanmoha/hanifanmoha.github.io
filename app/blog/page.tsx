@@ -1,13 +1,13 @@
 import fs from "fs"
 import path from "path"
-import matter from "gray-matter"
 import { LightBlogContent } from "./BlogContent"
+import PortoLayout from "../PortoLayout"
 
 interface LightBlogPost {
   slug: string
   title: string
-  date: string
-  content: string[]
+  description?: string
+  date?: string
 }
 
 async function getLightBlogPosts(): Promise<LightBlogPost[]> {
@@ -15,20 +15,14 @@ async function getLightBlogPosts(): Promise<LightBlogPost[]> {
   const jsonContents = fs.readFileSync(jsonPath, "utf8")
   const posts = JSON.parse(jsonContents)
 
-  return posts.map((post: { slug: string; title: string; date: string }) => {
-    const filePath = path.join(process.cwd(), "data", "blog-posts", `${post.slug}.md`)
-    const fileContents = fs.readFileSync(filePath, "utf8")
-    const { content } = matter(fileContents)
-    return {
-      ...post,
-      content: content.split("##########"),
-    }
-  })
+  return posts
 }
 
 export default async function LightBlog() {
   const posts = await getLightBlogPosts()
 
-  return <LightBlogContent initialPosts={posts} />
+  return <PortoLayout>
+    <LightBlogContent initialPosts={posts} />
+  </PortoLayout>
 }
 

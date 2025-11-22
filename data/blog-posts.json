@@ -1,10 +1,14 @@
 [
   {
+    "published": true,
     "slug": "test-markdown",
-    "title": "Testing rendering of Markdown"
+    "title": "Testing rendering of Markdown",
+    "description": "This is a test post to see if the markdown rendering works."
   },
   {
+    "published": false,
     "slug": "binary-tree-general",
-    "title": "Pohon Biner"
+    "title": "Pohon Biner",
+    "description": "Find out how binary tree works in general."
   }
 ]

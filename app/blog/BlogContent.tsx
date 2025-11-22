@@ -1,15 +1,13 @@
 "use client"
 
-import ReactMarkdown from "react-markdown"
-import { Navigation, Pagination } from 'swiper/modules';
-
-import { Swiper, SwiperSlide } from 'swiper/react'
+import Link from 'next/link'
 
 interface LightBlogPost {
     slug: string
     title: string
-    date: string
-    content: string[]
+    published: boolean
+    description?: string
+    date?: string
 }
 
 interface LightBlogContentProps {
@@ -21,39 +19,29 @@ export function LightBlogContent({ initialPosts }: LightBlogContentProps) {
     if (initialPosts.length === 0) return <div>No posts found.</div>
 
     return (
-        <div className="max-w-lg mx-auto mt-8 space-y-6">
+        <div className="max-w-4xl mx-auto">
             <div className="space-y-2 mb-16">
                 <h1 className="text-5xl font-bold text-gray-900">Blog</h1>
-                <p className="text-xl text-gray-600">Light reading to keep you occupied</p>
+                <p className="text-xl text-gray-600">To test the limit and breakthrough</p>
             </div>
 
-            {initialPosts.map((post) => (
-                <div key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="p-4 border-b border-gray-200">
-                        <div className="flex items-center gap-3">
-                            <div>
-                                <h2 className="font-medium text-sm">{post.title}</h2>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <Swiper
-                        pagination={true}
-                        navigation={true}
-                        modules={[Pagination, Navigation]}
-                        style={{ height: "400px" }}
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-1">
+                {initialPosts.filter((post) => post.published).map((post) => (
+                    <Link
+                        key={post.slug}
+                        href={`/blog/${post.slug}`}
+                        className="group block"
                     >
-                        {post.content.map((content, index) =>
-                            <SwiperSlide key={index} className="px-12 py-6 overflow-y-auto prose">
-                                <ReactMarkdown>
-                                    {content}
-                                </ReactMarkdown>
-                            </SwiperSlide>)}
-                    </Swiper>
-
-                </div>
-            ))}
+                        <div className="h-full bg-gray-50 overflow-hidden rounded-lg border border-gray-200 transition-all duration-200 hover:border-gray-300 hover:shadow-lg p-6 flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-lg font-medium text-gray-900 group-hover:text-blue-600">{post.title}</h3>
+                                {post.description && <p className="mt-2 text-gray-600">{post.description}</p>}
+                            </div>
+                            {post.date && <p className="mt-4 text-sm text-gray-500">{post.date}</p>}
+                        </div>
+                    </Link>
+                ))}
+            </div>
         </div>
     )
 } 
