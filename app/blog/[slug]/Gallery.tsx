@@ -72,7 +72,7 @@ export default function Gallery({ post, slug }: GalleryProps) {
       >
         {post.content.map((content, index) => (
           <SwiperSlide key={index} className="overflow-y-auto">
-            <div className='max-w-2xl py-12 px-6 mx-auto prose bg-white min-h-full flex flex-col justify-center'>
+            <div className='max-w-2xl py-12 px-6 mx-auto prose prose-lg bg-white min-h-full flex flex-col justify-center'>
               <ReactMarkdown components={MarkdownComponents}>
                 {content}
               </ReactMarkdown>
