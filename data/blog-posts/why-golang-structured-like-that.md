@@ -39,6 +39,8 @@ When transfer balance from one account to another, we need to:
 
 
 ```
+// Services
+
 type Service struct {
 }
 
@@ -69,20 +71,21 @@ From the code above, we need at least 2 interactions with the data:
 We enforce the implementation of `Get User By ID` and `Update User Balance By ID` by providing interface that must be implemented by anyone who want to use the service.
 
 ```
-// User Struct
+// Models
+
 type User struct {
 	ID      string
 	Name    string
 	Balance int
 }
 
-// Repository Interface
+// Services
+
 type Repository interface {
-	FindUserByID(id string) (User, error)
+	FindUserByID(id string) (*User, error)
 	UpdateUserBalance(id string, balance int) error
 }
 
-// Modify Service to use Repository
 type Service struct {
 	repository Repository
 }
@@ -125,3 +128,206 @@ func (s *Service) Transfer(senderID string, receiverID string, amount int) error
 ---
 ---
 ---
+In example, lets create a simple script to transfer balance from Bob to Alice. In this example, lets just create repository layer that store user in memory
+
+```
+// Repositories
+
+type HardCodedRepository struct {
+	userMap map[string]User
+}
+
+func (r *HardCodedRepository) FindUserByID(id string) (*User, error) {
+	user, exist := r.userMap[id]
+	if !exist {
+		return nil, errors.New("user not found")
+	}
+	return &user, nil
+}
+
+func (r *HardCodedRepository) UpdateUserBalance(id string, balance int) error {
+	user, exist := r.userMap[id]
+	if !exist {
+		return errors.New("user not found")
+	}
+	user.Balance = balance
+	r.userMap[id] = user
+	return nil
+}
+```
+
+And in main function, lets initialize the user map data
+```
+func NewHardCodedRepository() *HardCodedRepository {
+	userMap := make(map[string]User)
+	// Init users
+	userMap["user_abc"] = User{"user_abc", "Alice", 100}
+	userMap["user_xyz"] = User{"user_xyz", "Bob", 50}
+	return &HardCodedRepository{
+		userMap: userMap,
+	}
+}
+
+func main() {
+	// Initialize service with repository that satisfy the interface provided
+	service := Service{
+		repository: NewHardCodedRepository(),
+	}
+
+	// Additional function to retrieve current balance
+	aliceBalance1, _ := service.GetBalance("user_abc")
+	bobBalance1, _ := service.GetBalance("user_xyz")
+
+	fmt.Printf("Initial Balance : Alice (%d); Bob (%d)\n", aliceBalance1, bobBalance1)
+
+	fmt.Println("Transfer 10 from Alice to Bob")
+	_ = service.Transfer("user_abc", "user_xyz", 10)
+
+	aliceBalance2, _ := service.GetBalance("user_abc")
+	bobBalance2, _ := service.GetBalance("user_xyz")
+
+	fmt.Printf("Initial Balance : Alice (%d); Bob (%d)\n", aliceBalance2, bobBalance2)
+}
+```
+---
+---
+---
+
+When you run the code, you will get output
+```
+Initial Balance : Alice (100); Bob (50)
+Transfer 10 from Alice to Bob
+Initial Balance : Alice (90); Bob (60)
+```
+
+You can see full code of this example in the next slide!
+---
+---
+---
+```
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+// Models
+
+type User struct {
+	ID      string
+	Name    string
+	Balance int
+}
+
+// Services
+
+type Repository interface {
+	FindUserByID(id string) (*User, error)
+	UpdateUserBalance(id string, balance int) error
+}
+
+type Service struct {
+	repository Repository
+}
+
+func (s *Service) Transfer(senderID string, receiverID string, amount int) error {
+
+	// check if amount valid
+	if amount <= 0 {
+		return errors.New("amount must be greater than 0")
+	}
+
+	// find sender
+	sender, err := s.repository.FindUserByID(senderID)
+	if err != nil {
+		return err
+	}
+
+	// find receiver
+	receiver, err := s.repository.FindUserByID(receiverID)
+	if err != nil {
+		return err
+	}
+
+	// check sender balance
+	if sender.Balance < amount {
+		return errors.New("sender balance is not enough")
+	}
+
+	// update balance
+	s.repository.UpdateUserBalance(senderID, sender.Balance-amount)
+	s.repository.UpdateUserBalance(receiverID, receiver.Balance+amount)
+
+	return nil
+}
+
+func (s *Service) GetBalance(userID string) (int, error) {
+	user, err := s.repository.FindUserByID(userID)
+	if err != nil {
+		return 0, err
+	}
+	return user.Balance, nil
+}
+
+// Repositories
+
+type HardCodedRepository struct {
+	userMap map[string]User
+}
+
+func (r *HardCodedRepository) FindUserByID(id string) (*User, error) {
+	user, exist := r.userMap[id]
+	if !exist {
+		return nil, errors.New("user not found")
+	}
+	return &user, nil
+}
+
+func (r *HardCodedRepository) UpdateUserBalance(id string, balance int) error {
+	user, exist := r.userMap[id]
+	if !exist {
+		return errors.New("user not found")
+	}
+	user.Balance = balance
+	r.userMap[id] = user
+	return nil
+}
+
+// Main code
+
+func NewHardCodedRepository() *HardCodedRepository {
+	userMap := make(map[string]User)
+	// Init users
+	userMap["user_abc"] = User{"user_abc", "Alice", 100}
+	userMap["user_xyz"] = User{"user_xyz", "Bob", 50}
+	return &HardCodedRepository{
+		userMap: userMap,
+	}
+}
+
+func main() {
+	// Initialize service with repository that satisfy the interface provided
+	service := Service{
+		repository: NewHardCodedRepository(),
+	}
+
+	aliceBalance1, _ := service.GetBalance("user_abc")
+	bobBalance1, _ := service.GetBalance("user_xyz")
+
+	fmt.Printf("Initial Balance : Alice (%d); Bob (%d)\n", aliceBalance1, bobBalance1)
+
+	fmt.Println("Transfer 10 from Alice to Bob")
+	_ = service.Transfer("user_abc", "user_xyz", 10)
+
+	aliceBalance2, _ := service.GetBalance("user_abc")
+	bobBalance2, _ := service.GetBalance("user_xyz")
+
+	fmt.Printf("Initial Balance : Alice (%d); Bob (%d)\n", aliceBalance2, bobBalance2)
+}
+
+```
+---
+---
+---
+With this approach, the transfer function doesnt change when you change how you store your data or how you serve the app. You can use HTTP, gRPC, or any other way to serve the app.
