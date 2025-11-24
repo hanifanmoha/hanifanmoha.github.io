@@ -1,40 +1,40 @@
-# Why Golang Structured Like That?
+# Why is Golang Structured Like That?
 
-If you came from maybe JS world and start your journey into fullstack, you might be confused why golang projects structure is super wierd
-
----
----
----
-
-## Lets find out the reason behind it!
+If you come from the JS world and are starting your journey into fullstack development, you might be confused about why Golang project structure is super weird.
 
 ---
 ---
 ---
 
-## Layerd Architecture
-
-There are so many pattern in golang projects, but the most common is by separate the code into 3 layers:
-
-- `Presentation Layer / Handler` : Layer to handle how our app is served to the world, including request, response, validation, and authentication
-- `Business Layer / Service` : Layer to handle the business logic`
-- `Data Layer / Repository` : Layer to handle the data access
-
-The idea is to put the business logic in the service layer, and make sure it is not affected by how the app is served by `Presentation Layer` and how the data is accessed by `Data Layer`.
-
-How to implement it?
+## Let's find out the reason behind it!
 
 ---
 ---
 ---
-We will use `Transfer` function as example. Lets ignore how it will be served and how the data is accessed.
 
-When transfer balance from one account to another, we need to:
+## Layered Architecture
 
-1. Check if transfer amount valid
-2. Find sender
-3. Find receiver
-4. Check sender balance
+There are many patterns in Golang projects, but the most common one is to separate the code into 3 layers:
+
+- `Presentation Layer / Handler`: Layer to handle how our app is served to the world, including request, response, validation, and authentication
+- `Business Layer / Service`: Layer to handle the business logic
+- `Data Layer / Repository`: Layer to handle the data access
+
+The idea is to put the business logic in the service layer and make sure it is not affected by how the app is served by the `Presentation Layer` or how the data is accessed by the `Data Layer`.
+
+How do we implement it?
+
+---
+---
+---
+We will use the `Transfer` function as an example. Let's ignore how it will be served and how the data is accessed.
+
+When transferring balance from one account to another, we need to:
+
+1. Check if the transfer amount is valid
+2. Find the sender
+3. Find the receiver
+4. Check the sender's balance
 5. Update sender & receiver balance
 
 
@@ -68,7 +68,7 @@ From the code above, we need at least 2 interactions with the data:
 ---
 ---
 
-We enforce the implementation of `Get User By ID` and `Update User Balance By ID` by providing interface that must be implemented by anyone who want to use the service.
+We enforce the implementation of `Get User By ID` and `Update User Balance By ID` by providing an interface that must be implemented by anyone who wants to use the service.
 
 ```
 // Models
@@ -91,7 +91,7 @@ type Service struct {
 }
 ```
 
-With that, we can implement `Transfer` function that utilize the repository
+With that, we can implement the `Transfer` function that utilizes the repository
 
 ```
 func (s *Service) Transfer(senderID string, receiverID string, amount int) error {
@@ -128,7 +128,7 @@ func (s *Service) Transfer(senderID string, receiverID string, amount int) error
 ---
 ---
 ---
-In example, lets create a simple script to transfer balance from Bob to Alice. In this example, lets just create repository layer that store user in memory
+For example, let's create a simple script to transfer balance from Bob to Alice. In this example, let's just create a repository layer that stores users in memory
 
 ```
 // Repositories
@@ -156,7 +156,7 @@ func (r *HardCodedRepository) UpdateUserBalance(id string, balance int) error {
 }
 ```
 
-And in main function, lets initialize the user map data
+And in the main function, let's initialize the user map data
 ```
 func NewHardCodedRepository() *HardCodedRepository {
 	userMap := make(map[string]User)
@@ -193,14 +193,14 @@ func main() {
 ---
 ---
 
-When you run the code, you will get output
+When you run the code, you will get the following output:
 ```
 Initial Balance : Alice (100); Bob (50)
 Transfer 10 from Alice to Bob
 Initial Balance : Alice (90); Bob (60)
 ```
 
-You can see full code of this example in the next slide!
+You can see the full code of this example in the next slide!
 ---
 ---
 ---
@@ -330,4 +330,4 @@ func main() {
 ---
 ---
 ---
-With this approach, the transfer function doesnt change when you change how you store your data or how you serve the app. You can use HTTP, gRPC, or any other way to serve the app.
+With this approach, the transfer function doesn't change when you change how you store your data or how you serve the app. You can use HTTP, gRPC, or any other method to serve the app.
