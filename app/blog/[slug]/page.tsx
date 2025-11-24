@@ -18,6 +18,7 @@ export async function generateStaticParams() {
     }
 }
 
+const SEPARATOR = `---\n---\n---`
 
 async function getPost(slug: string): Promise<Post | null> {
     try {
@@ -25,7 +26,7 @@ async function getPost(slug: string): Promise<Post | null> {
         const fileContents = fs.readFileSync(filePath, "utf8")
         const { content } = matter(fileContents)
         return {
-            content: content.split("##########")
+            content: content.split(SEPARATOR)
         }
     } catch (error) {
         console.error("Error reading post file:", error)

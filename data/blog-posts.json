@@ -1,6 +1,6 @@
 [
   {
-    "published": true,
+    "published": false,
     "slug": "test-markdown",
     "title": "Testing rendering of Markdown",
     "description": "This is a test post to see if the markdown rendering works."
@@ -10,5 +10,11 @@
     "slug": "binary-tree-general",
     "title": "Pohon Biner",
     "description": "Find out how binary tree works in general."
+  },
+  {
+    "published": true,
+    "slug": "why-golang-structured-like-that",
+    "title": "Why Golang Structured Like That?",
+    "description": "Find out why golang structured like that."
   }
 ]
