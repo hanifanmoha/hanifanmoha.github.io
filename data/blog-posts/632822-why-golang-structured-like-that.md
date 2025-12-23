@@ -331,3 +331,38 @@ func main() {
 ---
 ---
 With this approach, the transfer function doesn't change when you change how you store your data or how you serve the app. You can use HTTP, gRPC, or any other method to serve the app.
+
+---
+---
+---
+
+
+Lets say we want to implement sql database. We just need to implement object that satisfies the `Repository` interface then inject it into the service.
+
+```
+type SQLRepository struct {
+	db DBConnection // Placeholder for DB connection
+}
+
+func (r *SQLRepository) FindUserByID(id string) (*User, error) {
+	user, err := r.db.Execute("SELECT id, name, balance FROM users WHERE id = ?", id)
+	if err != nil {
+		return nil, err
+	}
+	return mockParseUser(user), nil
+}
+
+func (r *SQLRepository) UpdateUserBalance(id string, balance int) error {
+	_, err := r.db.Execute("UPDATE users SET balance = ? WHERE id = ?", balance, id)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+```
+
+---
+---
+---
+
+With this approach, each layer has its own responsibility and can be changed independently without affecting other layers. This makes the code more maintainable, testable, and scalable.

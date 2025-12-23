@@ -1,5 +1,12 @@
 [
   {
+    "published": true,
+    "date": "23 December 2025",
+    "slug": "632822",
+    "title": "Why Golang Structured Like That?",
+    "description": "Find out the benefit of dependency injection in golang."
+  },
+  {
     "published": false,
     "slug": "739237",
     "title": "Testing rendering of Markdown",
@@ -10,11 +17,5 @@
     "slug": "873049",
     "title": "Pohon Biner",
     "description": "Find out how binary tree works in general."
-  },
-  {
-    "published": true,
-    "slug": "632822",
-    "title": "Why Golang Structured Like That?",
-    "description": "Find out why golang structured like that."
   }
 ]
