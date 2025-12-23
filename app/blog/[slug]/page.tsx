@@ -22,7 +22,19 @@ const SEPARATOR = `---\n---\n---`
 
 async function getPost(slug: string): Promise<Post | null> {
     try {
-        const filePath = path.join(process.cwd(), "data", "blog-posts", `${slug}.md`)
+        const numberSlug = Number(slug.split('-')[0])
+        if (isNaN(numberSlug)) {
+            console.error("Invalid slug, not a number:", slug)
+            return null
+        }
+        const blogPostsDir = path.join(process.cwd(), "data", "blog-posts")
+        const files = fs.readdirSync(blogPostsDir)
+        const fileName = files.find(name => name.startsWith(`${numberSlug}`))
+        if (!fileName) {
+            console.error("No file found for slug:", slug)
+            return null
+        }
+        const filePath = path.join(blogPostsDir, fileName)
         const fileContents = fs.readFileSync(filePath, "utf8")
         const { content } = matter(fileContents)
         return {
