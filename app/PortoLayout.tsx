@@ -19,6 +19,9 @@ export default function PortoLayout({ children }: { children: React.ReactNode })
               {/* <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900">
                 Blog
               </Link> */}
+              <Link href="https://hanifanmoha-blog.vercel.app/" className="text-sm text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
+                Blog
+              </Link>
             </div>
           </div>
         </div>

@@ -4,9 +4,9 @@
   "_bio": "Experienced software engineer with a strong background in full-stack development, mobile applications, and engineering management. Skilled in creating efficient solutions for various industries, from agriculture technology to government applications.",
   "experience": [
     {
-      "company": "Quipper / Quipper Edukasi Indonesia",
+      "company": "Quipper / PT Quipper Edukasi Indonesia",
       "position": "Software Engineer",
-      "duration": "February 2025 - Present",
+      "duration": "April 2025 - Present",
       "location": "Jakarta (Remote), ID",
       "_description": [
         ""
@@ -16,7 +16,8 @@
         "Ruby on Rails",
         "Kubernetes",
         "Docker",
-        "Next JS"
+        "Next JS",
+        "AWS"
       ]
     },
     {
