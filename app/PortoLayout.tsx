@@ -13,8 +13,8 @@ export default function PortoLayout({ children }: { children: React.ReactNode })
               <Link href="/" className="text-sm text-gray-600 hover:text-gray-900">
                 About
               </Link>
-              <Link href="/projects" className="text-sm text-gray-600 hover:text-gray-900">
-                Projects
+              <Link href="/labs" className="text-sm text-gray-600 hover:text-gray-900">
+                Labs
               </Link>
               {/* <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900">
                 Blog

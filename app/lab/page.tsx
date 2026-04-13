@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import PortoLayout from '../PortoLayout'
 
-interface Project {
+interface Lab {
   id: string
   title: string
   description: string
@@ -12,20 +12,20 @@ interface Project {
   projectUrl: string
 }
 
-function getProjects(): Project[] {
+function getProjects(): Lab[] {
   const filePath = path.join(process.cwd(), 'data', 'projects.json')
   const fileContents = fs.readFileSync(filePath, 'utf8')
   return JSON.parse(fileContents)
 }
 
-export default function Projects() {
+export default function Labs() {
   const projects = getProjects()
 
   return (
     <PortoLayout>
       <div className="max-w-4xl mx-auto min-h-screen">
         <div className="space-y-2 mb-16">
-          <h1 className="text-5xl font-bold text-gray-900">Projects</h1>
+          <h1 className="text-5xl font-bold text-gray-900">Labs</h1>
           <p className="text-xl text-gray-600">A showcase of my recent work</p>
         </div>
 
