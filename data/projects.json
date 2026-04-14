@@ -12,5 +12,12 @@
     "description": "Sanbox App to Send Mock Email via HTTP",
     "imageUrl": "https://raw.githubusercontent.com/hanifanmoha/hanifanmoha.github.io/refs/heads/main/public/images/projects/fake-mailbox.png",
     "projectUrl": "https://fake-mailbox.vercel.app/"
+  },
+  {
+    "id": "3",
+    "title": "Rest Bucket",
+    "description": "An HTTP Sandbox to testout HTTP requests",
+    "imageUrl": "https://raw.githubusercontent.com/hanifanmoha/hanifanmoha.github.io/refs/heads/main/public/images/projects/rest-bucket.png",
+    "projectUrl": "https://rest-bucket.vercel.app/"
   }
 ]
